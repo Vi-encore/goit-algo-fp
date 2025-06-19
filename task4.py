@@ -63,5 +63,5 @@ def draw_tree_from_heap(heap):
     return nodes[0]
 
 
-root = [1, 2, 4, 6, 8, 60]
+root = [0, 4, 1, 5, 10, 3]
 draw_tree(draw_tree_from_heap(root))
