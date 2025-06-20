@@ -74,6 +74,8 @@ plt.xticks(sums)  # Відображаємо цілі числа на осі X
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 plt.legend()
 plt.show()
+# To save generated plot
+# plt.savefig("my_plot.png")
 
 
 # To generate data for .md
