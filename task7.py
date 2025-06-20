@@ -75,3 +75,14 @@ plt.xticks(sums)  # Відображаємо цілі числа на осі X
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 plt.legend()
 plt.show()
+
+print("\nТаблиця ймовірностей сум (100 000 кидків):")
+print("{:<5} {:<15} {:<15} {:<10}".format("Сума", "Монте-Карло", "Аналітична", "Різниця"))
+print("-" * 50)
+
+for sum_val in sorted(probabilities.keys()):
+    emp_prob = probabilities[sum_val]
+    theo_prob = theoretical_probabilities[sum_val]
+    difference = abs(emp_prob - theo_prob) # Абсолютна різниця
+
+    print("{:<5} {:<15.4f} {:<15.4f} {:<10.4f}".format(sum_val, emp_prob * 100, theo_prob * 100, difference * 100)) # Виводимо у відсотках
