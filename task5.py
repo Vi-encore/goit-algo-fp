@@ -82,6 +82,9 @@ def get_gradient_colors(quantity, start="#780056", end="#fbcaed"):
 
 # BFS
 def bfs_visualize(root):
+    if not root:
+        return []
+
     queue = deque([root])
     visited = []
 
@@ -102,6 +105,9 @@ def bfs_visualize(root):
 
 # DFS
 def dfs_visualize(root):
+    if not root:
+        return []
+
     stack = [root]
     visited = []
 
